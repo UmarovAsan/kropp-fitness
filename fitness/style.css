@@ -746,7 +746,7 @@ input[type='number'] {
 }
 
 .calculate-description {
-	width: 385.5px;
+	max-width: 385.5px;
 }
 
 .calculate-description:not(:last-child) {
@@ -843,10 +843,117 @@ input[type='number'] {
   background-color: var(--color-dark);
 }
 
+.footer {
+	--footerLogoWidth: 20.77%;
+}
 
+.footer-main {
+	padding-block: 140px 157px;
+}
 
+.footer-header,
+.footer-body {
+	display: grid;
+	column-gap: 62px;
+}
 
+.footer-header {
+	grid-template-columns: var(--footerLogoWidth) auto;
+}
 
+.footer-header:not(:last-child) {
+	margin-bottom: 60px;
+}
+
+.footer-logo-image {
+	height: auto;
+}
+
+.footer-description {
+	max-width: 924px;
+	text-align: left;
+}
+
+.footer-body {
+	grid-template-columns: var(--footerLogoWidth) repeat(3, 1fr);
+}
+
+.footer-colum-title {
+	font-size: clamp(18px, 1.15vw, 22px);
+}
+
+.footer-colum-title:not(:last-child) {
+	margin-bottom: 15px;
+}
+
+.footer-extra {
+	padding-block: 15px;
+	background-color: var(--color-dark-alternate);
+}
+
+.footer-schedule:not(:last-child) {
+	margin-bottom: 13px;
+}
+
+.footer-address {
+	font-style: normal;
+}
+
+.footer-address:not(:last-child) {
+	margin-bottom: 35px;
+}
+
+.footer-colum-title.has-arrow::after {
+	content: '';
+	display: inline-block;
+	height: 0.74em;
+	aspect-ratio: 1;
+	margin-left: 0.5em;
+	background: url('./icons/bold-arrow-down-right.svg') center/contain no-repeat;
+	scale: -1 1;
+}
+
+.footer-subscribe {
+	position: relative;
+	max-width: 302px;
+}
+
+.footer-subscribe:not(:last-child) {
+	margin-bottom: 50px;
+}
+
+.footer-subscribe-input {
+	padding-right: 70px;
+}
+
+.footer-subscribe-button {
+	position: absolute;
+	top: 0;
+	right: 0;
+	height: 100%;
+	aspect-ratio: 1;
+	background: url(./icons/arrow-top-right.svg) center/70% no-repeat;
+	border: var(--border);
+	border-radius: 50%;
+}
+
+.footer-subscribe-button:hover {
+	background-color: var(--color-light-gray);
+}
+
+.footer-soc1als-list {
+	display: flex;
+	column-gap: 18px;
+}
+
+.footer-soc1als-link {
+	display: flex;
+	width: 23px;
+}
+
+.footer-copyright {
+	font-size: 14px;
+}
 
 @media (max-width: 1919px) {
 	.motivation-card-image {
@@ -912,7 +1019,7 @@ input[type='number'] {
 		height: 360px;
 	}
 
-	.calculate {
+	.calculate-body {
 		padding-block: 100px;
 	}
 
@@ -920,7 +1027,7 @@ input[type='number'] {
 		column-gap: 20px;
 	}
 
-	.calculate-form-body {
+	.calculate-form {
 		grid-template-columns: 1fr;
 	}
 
@@ -1063,20 +1170,20 @@ input[type='number'] {
 		display: none;
 	}
 
-	.calculate {
+	.calculate-body {
 		padding-block: 60px;
 	}
-
-	.footer-body {
-		grid-template-columns: 1fr;
-	}
-
+	
 	.footer-main {
 		padding-top: 50px;
 	}
-
+	
 	.footer-header:not(:last-child) {
 		margin-bottom: 30px;
+	}
+	
+	.footer-body {
+		grid-template-columns: 1fr;
 	}
 
 	.footer-subscribe:not(:last-child) {
